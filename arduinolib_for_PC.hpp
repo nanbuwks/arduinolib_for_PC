@@ -1,3 +1,19 @@
+#ifndef LGFX_USE_V1
+#ifdef  __GNUC__
+#include <lgfx/Fonts/IPA/lgfx_font_japan.h>
+#include <lgfx/Fonts/efont/lgfx_efont_cn.h>
+#include <lgfx/Fonts/efont/lgfx_efont_ja.h>
+#include <lgfx/Fonts/efont/lgfx_efont_kr.h>
+#include <lgfx/Fonts/efont/lgfx_efont_tw.h>
+#include <lgfx/Fonts/IPA/lgfx_font_japan.c>
+#include <lgfx/Fonts/efont/lgfx_efont_cn.c>
+#include <lgfx/Fonts/efont/lgfx_efont_ja.c>
+#include <lgfx/Fonts/efont/lgfx_efont_kr.c>
+#include <lgfx/Fonts/efont/lgfx_efont_tw.c>
+#endif
+#endif
+
+
 #define millis(num) SDL_GetTicks()
 #define String(num) to_string(num)
 #define delay(msec) SDL_Delay(msec)
@@ -27,3 +43,12 @@ class SerialDummy
     }
 };
 SerialDummy Serial;
+
+#ifndef LGFX_USE_V1
+void main(){
+   setup();
+   while(1){
+	   loop();
+   }
+}
+#endif
