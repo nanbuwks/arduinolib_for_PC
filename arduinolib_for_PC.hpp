@@ -43,12 +43,18 @@ class SerialDummy
     }
 };
 SerialDummy Serial;
-
 #ifndef LGFX_USE_V1
-void main(){
+#include <SDL2/SDL.h>
+#define setup() int setup()
+#define loop() int loop()
+int setup();
+int loop();
+int main();
+main(){
+int dummy;
    setup();
    while(1){
-	   loop();
+     loop();
    }
 }
 #endif
