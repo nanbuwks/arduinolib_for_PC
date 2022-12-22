@@ -21,6 +21,17 @@ put this library in sketch directry and add sketch:
 
 ```
 
+if you use LovyanGFX too, as below:
+
+```
+#define LGFX_USE_V1
+#include "arduinolib_for_PC.hpp"
+
+```
+
+
+
+
 # Support:
 
 

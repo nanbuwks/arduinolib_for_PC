@@ -1,4 +1,4 @@
-#ifndef LGFX_USE_V1
+#ifdef LGFX_USE_V1
 #ifdef  __GNUC__
 #include <lgfx/Fonts/IPA/lgfx_font_japan.h>
 #include <lgfx/Fonts/efont/lgfx_efont_cn.h>
