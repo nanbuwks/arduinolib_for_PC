@@ -41,6 +41,13 @@ if you use LovyanGFX too, as below:
 - String(num) to_string(num)
 - delay(msec) SDL_Delay(msec)
 
+## Too bad! (lol.)
+
+- Since there is no GPIO, digitalRead/degitalWrite etc. cannot be used.
+- There is quite a difference between "open" and "read" used to read a file, so I'll have them rewrite it and do it.
+- For other areas that are easier to deal with, each of you should do your best to fix them.
+
+
 ## Depend
 
 need SDL2 library for SDL_Delay ( delay )
